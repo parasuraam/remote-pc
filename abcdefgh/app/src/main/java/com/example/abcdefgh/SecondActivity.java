@@ -31,7 +31,7 @@ public class SecondActivity extends AppCompatActivity {
                             c.objectInputStream = new ObjectInputStream(
                                     c.clientSocket.getInputStream());
                         }
-                        final StringBuilder message = (StringBuilder) c.objectInputStream.readObject();
+                        final String message = (String) c.objectInputStream.readObject();
                         if (message != null) {
                             runOnUiThread(new Runnable() {
                                 @Override
